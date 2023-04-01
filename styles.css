@@ -1,0 +1,113 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .centered-timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    height: 240px;
+    background: #f9f9f9;
+    border: 1px solid #cdd5df;
+    border-radius: 8px;
+  }
+  
+  .timer-display {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .button-container button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .cta-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 188px;
+    height: 64px;
+    background: #2970ff;
+    border-radius: 4px;
+    border-color: #2970ff;
+  }
+  
+  .cta-display {
+    width: 56px;
+    height: 33px;
+    color: #f1f1f1;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+  }
+  
+  .secondary-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 188px;
+    height: 64px;
+    background: #d2d6db;
+    border-radius: 4px;
+    border-color: #d2d6db;
+  }
+  
+  .secondary-display {
+    width: 77px;
+    height: 33px;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    color: #1d1d1d;
+  }
+  
+  .digit-display {
+    width: 262px;
+    height: 131px;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 131px;
+  }
+  
+  /* updated styles for CTA and secondary buttons */
+  .cta-button .cta-display {
+    font-size: 24px;
+    color: #f1f1f1;
+  }
+  
+  .secondary-button .secondary-display {
+    font-size: 24px;
+    color: #1d1d1d;
+  }
+  
