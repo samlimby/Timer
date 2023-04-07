@@ -8,23 +8,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <div class="timer-container">
-        <div class="centered-timer">
-          <div class="timer-display">
-            <div class="digit-display" id="digit-display">00:00</div>
-          </div>
+  <div class="dropdown-container">
+    <div class="dropdown-wrapper">
+      <button id="dropdown-button" class="dropdown-button" onclick="toggleDropdown('dropdown-list')">
+        <span class="dropdown-text">Timekeeper</span>
+        <div class="chevron-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"/>
+          </svg>
         </div>
-        <div class="button-container">
-          <button class="cta-button">
-            <div class="cta-display" id="cta-display">Start</div>
-          </button>
-          <button class="secondary-button">
-            <div class="secondary-display" id="secondary-display">Cancel</div>
-          </button>
-        </div>
-      </div>      
-    <script src="app.js"></script>
+      </button>
+    </div>
+    <div id="dropdown-list" class="dropdown-list">
+      <div class="menu-item">
+        <span class="menu-item-icon"></span>
+        <span class="menu-item-middle">Timer</span>
+        <span class="menu-item-right">⌘T</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-icon"></span>
+        <span class="menu-item-middle">Stopwatch</span>
+        <span class="menu-item-right">⌘S</span>
+      </div>
+    </div>
+  </div>  
+  <div class="timer-container">
+    <div class="centered-timer">
+      <div class="timer-display">
+        <div class="digit-display" id="digit-display">00:00</div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="cta-button">
+        <div class="cta-display" id="cta-display">Start</div>
+      </button>
+      <button class="secondary-button">
+        <div class="secondary-display" id="secondary-display">Cancel</div>
+      </button>
+    </div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
