@@ -30,3 +30,22 @@ function updateTimer() {
 function padTime(time) {
   return time.toString().padStart(2, '0');
 }
+
+function toggleDropdown(elementId) {
+  const referenceElement = document.getElementById(elementId);
+  const dropdownList = document.getElementById('dropdown-list');
+  const chevronIcon = referenceElement.querySelector('.chevron-icon');
+  
+  if (dropdownList.style.display === 'none') {
+    const rect = referenceElement.getBoundingClientRect();
+  
+    const top = rect.bottom + 8;
+    const left = 48;
+  
+    dropdownList.style.display = 'flex';
+    chevronIcon.style.transform = 'rotate(180deg)';
+  } else {
+    dropdownList.style.display = 'none';
+    chevronIcon.style.transform = 'rotate(0deg)';
+  }
+}
