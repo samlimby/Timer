@@ -1,9 +1,165 @@
+/* header container*/
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+}
+
+/*style for centered badge*/
+
+.stopwatch-badge {
+  display: flex;
+  justify-content: center; /* horizontally center the content */
+  align-items: center; /* vertically center the content */
+  margin-top: 54px;
+  background: #F2F4F7;
+  border-radius: 16px;
+}
+
+.stopwatch-text {
+  color: #344054; 
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+/* styles for dropdown menu button */
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  box-sizing: border-box;
+  display: flex;
+  left: 40px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 8px;
+  width: 142px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #CDD5DF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-text { 
+  color: #1d1d1d; 
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.chevron-icon {
+  display: flex;
+  width: 24px; 
+  height: 24px;
+  transition: transform 0.3s ease; 
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-list {
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  top: 87px;
+  left: 40px;
+  width: auto;
+  background: #FFFFFF;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* styles for dropdown menu items */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0px; 
+}
+
+.menu-item-middle {
+  width: 147px;
+  height: 20px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  padding-left: 12px;
+  padding-right: 0px
+}
+
+.menu-item-right {
+  width: 17px;
+  height: 18px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #667085;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  padding-left: 0px;
+  padding-right: 12px
+}
+
+/* Add the new CSS class for the SVG icon in the dropdown menu items */
+.menu-item-icon {
+  width: 24px
+}
+
 .timer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .centered-timer {
@@ -114,7 +270,9 @@
 /* styles for dropdown menu button */
 
 .dropdown-container {
-  position: relative
+  position: absolute;
+  left: 40px;
+  top: 24px;
 }
 
 .dropdown-wrapper {
@@ -155,10 +313,10 @@
   display: flex;
   width: 24px; 
   height: 24px;
-  transition: transform 0.3s ease; 
 }
 
 .chevron-icon.rotate {
+  transition: transform 0.3s ease; 
   transform: rotate(180deg);
 }
 
@@ -181,50 +339,9 @@
 }
 
 .menu-item {
-  padding: 8px 16px;
+  padding: 16px 12px;
   cursor: pointer;
 }
 .menu-item:hover {
   background-color: #f0f0f0;
-}
-
-/* styles for dropdown menu items */
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-}
-
-.menu-item-middle {
-  width: 147px;
-  height: 20px;
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  color: #344054;
-  flex: none;
-  order: 1;
-  flex-grow: 1;
-}
-
-.menu-item-right {
-  width: 17px;
-  height: 18px;
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #667085;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
-
-/* Add the new CSS class for the SVG icon in the dropdown menu items */
-.menu-item-icon {
-  width: 24px
 }
